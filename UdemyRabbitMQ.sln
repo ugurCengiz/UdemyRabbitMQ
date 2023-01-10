@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyRabbitMQ.publisher", "UdemyRabbitMQ.publisher\UdemyRabbitMQ.publisher.csproj", "{7E058E7D-07FD-42F8-9410-F46ADAA6B128}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemyRabbitMQ.publisher", "UdemyRabbitMQ.publisher\UdemyRabbitMQ.publisher.csproj", "{7E058E7D-07FD-42F8-9410-F46ADAA6B128}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyRabbitMQ.subscriber", "UdemyRabbitMQ.subscriber\UdemyRabbitMQ.subscriber.csproj", "{5534259C-DFFF-4D80-96F1-F2C4409EF91E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemyRabbitMQ.subscriber", "UdemyRabbitMQ.subscriber\UdemyRabbitMQ.subscriber.csproj", "{5534259C-DFFF-4D80-96F1-F2C4409EF91E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{49D45523-9D42-4CD7-8E92-A93D7420FDE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5534259C-DFFF-4D80-96F1-F2C4409EF91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5534259C-DFFF-4D80-96F1-F2C4409EF91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5534259C-DFFF-4D80-96F1-F2C4409EF91E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D45523-9D42-4CD7-8E92-A93D7420FDE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D45523-9D42-4CD7-8E92-A93D7420FDE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D45523-9D42-4CD7-8E92-A93D7420FDE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D45523-9D42-4CD7-8E92-A93D7420FDE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
