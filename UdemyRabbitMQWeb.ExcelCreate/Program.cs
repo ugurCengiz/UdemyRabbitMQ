@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using RabbitMQ.Client;
+using UdemyRabbitMQWeb.ExcelCreate.Hubs;
 using UdemyRabbitMQWeb.ExcelCreate.Models;
 using UdemyRabbitMQWeb.ExcelCreate.Services;
 
@@ -20,7 +21,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(opt =>
 builder.Services.AddSingleton(sp => new ConnectionFactory() { Uri = new Uri(builder.Configuration.GetConnectionString("RabbitMQ")), DispatchConsumersAsync = true });
 builder.Services.AddSingleton<RabbitMQPublisher>();
 builder.Services.AddSingleton<RabbitMQClientService>();
-
+builder.Services.AddSignalR();
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -60,7 +61,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.MapHub<MyHub>("/MyHub");
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
